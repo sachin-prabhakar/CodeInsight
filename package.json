@@ -1,0 +1,18 @@
+{
+  "name": "code-analyser",
+  "version": "0.1.0",
+  "description": "Production-ready code and document analysis with RAG",
+  "scripts": {
+    "setup": "npm run setup:node && npm run setup:python",
+    "setup:node": "cd mcp && npm install && cd ../client && npm install",
+    "setup:python": "cd rag && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt",
+    "build": "cd mcp && npm run build && cd ../client && npm run build",
+    "index": "cd rag && source venv/bin/activate && python indexer.py --repo ../repo --docs ../docs",
+    "index-code": "cd rag && source venv/bin/activate && python indexer.py --repo ../repo --only code",
+    "index-docs": "cd rag && source venv/bin/activate && python indexer.py --repo ../docs --only docs",
+    "mcp": "cd mcp && npm run start",
+    "cli": "cd client && npm run cli",
+    "web": "cd client && npm run web"
+  }
+}
+

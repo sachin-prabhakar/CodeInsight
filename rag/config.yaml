@@ -1,0 +1,29 @@
+provider: ollama
+model: llama3
+embed_model: local
+
+index_dir: .rag_index
+repo_path: repo
+docs_path: docs
+
+code_globs:
+  - "**/*.{ts,tsx,js,jsx,py,go,java,rb,rs,cpp,c,cs,h,hpp}"
+ignore_globs:
+  - "**/node_modules/**"
+  - "**/.git/**"
+  - "**/dist/**"
+  - "**/build/**"
+  - "**/__pycache__/**"
+  - "**/.venv/**"
+  - "**/venv/**"
+
+max_chunk_tokens: 1000
+overlap_tokens: 200
+
+k_code: 8
+k_docs: 8
+rerank: auto
+
+bm25_weight: 0.3
+dense_weight: 0.7
+

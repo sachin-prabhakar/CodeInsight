@@ -1,0 +1,33 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Node
+node_modules/
+package-lock.json
+
+# Project data
+.rag_index/
+.rag/
+.docs/
+docs/
+repo/
+
+# Environment
+.env
+*.log
+
+# OS
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.cursor/
+
